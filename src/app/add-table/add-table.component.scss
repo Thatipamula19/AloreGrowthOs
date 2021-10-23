@@ -1,0 +1,143 @@
+.Controls {
+  width: 100%;
+  margin-top: 50px;
+}
+.Controls > * {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.buttonrow button {
+  margin: 5px;
+}
+.close {
+  width: 12px;
+  height: 12px;
+  float: right;
+  cursor: pointer;
+}
+.add {
+  width: 150px;
+  height: 45px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #334bfa;
+  border-radius: 5px;
+}
+.cancle {
+  width: 150px;
+  height: 45px;
+  color: #334bfa;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 2px solid #334bfa;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.icon {
+  position: relative;
+  width: 19.43px;
+  height: 25.37px;
+}
+.colorcircle {
+  height: 25px;
+  width: 25px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  background: #334bfa;
+  cursor: pointer;
+  border: 1px solid #dadada;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+emoji-mart {
+  width: 100%;
+}
+
+.color-picker {
+  $radius: 5px;
+
+  .circle {
+    $size: 40px;
+    height: $size;
+    width: $size;
+    box-sizing: border-box;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 1px solid #dadada;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  .opened {
+    box-shadow: 0 7px 13px 0 rgba(86, 95, 102, 0.07);
+    background: #fff;
+    max-width: 240px;
+    padding: 15px;
+    border-radius: $radius;
+    position: relative;
+    margin-top: 15px;
+    &:after {
+      border: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      content: "";
+      right: 10px;
+      position: absolute;
+      top: -20px;
+    }
+
+    .colors {
+      display: flex;
+      flex-wrap: wrap;
+
+      .circle {
+        flex: 40px 0 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .hex-code {
+      $height: 45px;
+      display: flex;
+      margin-top: 20px;
+
+      p {
+        width: 50%;
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        line-height: $height;
+      }
+
+      .g-input {
+        border: 1px solid #e8ebed;
+        height: $height;
+        border-radius: $radius;
+        width: 120px;
+
+        input {
+          border: none;
+          width: 100%;
+          text-transform: uppercase;
+          outline: none;
+          text-align: center;
+          letter-spacing: 1.5px;
+          color: #595b65;
+          height: 100%;
+          border-radius: $radius;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<div class="formdiv">
+  <mat-icon class="close" (click)="Close()">close</mat-icon>
+  <h1>Add a Table</h1>
+
+  <form [formGroup]="tableForm" (ngSubmit)="addTable(tableForm.value)">
+    <div class="Controls">
+      <mat-label>Name*</mat-label>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Segment Name"
+          formControlName="tname"
+          required
+        />
+      </mat-form-field>
+      <mat-label>Icon</mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label *ngIf="emojimart"> {{ emojimart }} </mat-label>
+        <mat-label class="icon" *ngIf="!emojimart"
+          ><img src="/assets/thumbs-up.png" width="19.43px" height="25.37px"
+        /></mat-label>
+        <mat-select
+          [matMenuTriggerFor]="menu"
+          [(ngModel)]="emoji"
+          formControlName="ticon"
+        >
+        </mat-select>
+        <mat-menu #menu="matMenu">
+          <emoji-mart
+            (emojiSelect)="handleClick($event)"
+            title="Pick your emoji…"
+            emoji="point_up"
+          >
+          </emoji-mart>
+        </mat-menu>
+      </mat-form-field>
+
+      <mat-label>Color</mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label>
+          <div class="colorcircle" [ngStyle]="{ background: color }"></div>
+        </mat-label>
+        <mat-select
+          [matMenuTriggerFor]="colormenu"
+          [(ngModel)]="color"
+          formControlName="tcolor"
+        >
+        </mat-select>
+        <mat-menu #colormenu="matMenu">
+          <div class="color-picker">
+            <div class="opened">
+              <div class="colors">
+                <div
+                  (click)="changeColor(paint)"
+                  *ngFor="let paint of colorPalette"
+                  class="circle"
+                  [ngStyle]="{ background: paint }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+      </mat-form-field>
+
+      <div class="buttonrow">
+        <button class="add" type="submit" color="primary">Add</button>
+        <button class="cancle" (click)="Close()">Cancle</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,50 @@
+.sdiv {
+  margin: 50px;
+}
+
+.addButton {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  /* left: 51.03%;
+  right: 44.8%;
+  top: 34.59%;
+  bottom: 58.01%; */
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #334bfa;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px rgba(51, 75, 250, 0.25);
+  border-radius: 10px;
+}
+button {
+  margin-left: 30px;
+}
+.tableButton {
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px rgba(51, 75, 250, 0.25);
+  border-radius: 10px;
+}
+/* h1 {
+  width: 183px;
+  height: 30px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 12px;
+
+
+  display: flex;
+  align-items: center;
+
+  color: #3c3c3c;
+} */

@@ -1,0 +1,19 @@
+<h1>Prospector</h1>
+
+<input
+  type="text"
+  name=""
+  id="search"
+  placeholder="Search for a table or a Segment"
+/>
+
+<button mat-raised-button (click)="addSegment()">
+  <mat-icon>add</mat-icon>
+  Add a Segment
+</button>
+
+<div class="sements">
+  <ul *ngFor="let segment of segments">
+    <li>{{ segment.sicon.native }} {{ segment.sname }}</li>
+  </ul>
+</div>

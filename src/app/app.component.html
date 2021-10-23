@@ -1,0 +1,17 @@
+<div id="leftnav">
+  <mat-icon class="description">description</mat-icon>
+
+  <mat-icon class="dashboard">dashboard</mat-icon>
+
+  <mat-icon class="notifications">notifications</mat-icon>
+  <mat-icon class="account_circle">account_circle</mat-icon>
+</div>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <app-segments></app-segments>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header></app-header>
+    <app-show-segments></app-show-segments>
+  </mat-drawer-content>
+</mat-drawer-container>

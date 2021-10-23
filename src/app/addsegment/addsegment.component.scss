@@ -1,0 +1,45 @@
+.Controls {
+  width: 100%;
+  margin-top: 50px;
+}
+.Controls > * {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.buttonrow button {
+  margin: 5px;
+}
+.add {
+  width: 150px;
+  height: 45px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #334bfa;
+  border-radius: 5px;
+}
+.cancle {
+  width: 150px;
+  height: 45px;
+  color: #334bfa;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 2px solid #334bfa;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.icon {
+  position: relative;
+  width: 19.43px;
+  height: 25.37px;
+}
+.close {
+  width: 12px;
+  height: 12px;
+  float: right;
+  cursor: pointer;
+}

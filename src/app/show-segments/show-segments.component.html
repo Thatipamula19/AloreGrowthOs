@@ -1,0 +1,21 @@
+<div class="sdiv" *ngFor="let segment of segments">
+  <mat-icon></mat-icon>
+  <h2>{{ segment.sicon.native }} {{ segment.sname }}</h2>
+
+  <button
+    mat-icon-button
+    class="tableButton"
+    *ngFor="let table of getTableBySegment(segment.sname)"
+    [ngStyle]="{ 'border-color': table.tcolor }"
+  >
+    {{ table.ticon.native }}
+  </button>
+  <button
+    mat-icon-button
+    class="addButton"
+    matTooltip="Add a table"
+    (click)="addTable(segment.sname)"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
